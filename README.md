@@ -133,3 +133,4 @@ def check_event(bo, screen, pika, bullets):
 
 ```
 
+pygaem新手，有许多错误或者不合适的地方还请见谅
