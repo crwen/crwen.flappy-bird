@@ -32,7 +32,7 @@ game_function -- 游戏功能实现（虽然有好多被我移到main里去了�
 ```
 
 
-ball.py
+ball.py  
 #其实这些障碍物的写法都差不多，我就只贴那个球的代码了
 ```markdown
 
