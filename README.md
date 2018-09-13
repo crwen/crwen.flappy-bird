@@ -17,6 +17,18 @@ Syntax highlighted code block
 因为文件很乱，在这里我解释一下我的文件吧
 main.py -- 主程序（我好像放了好多乱七八糟的东西）
 map.py --  地图（主要是实现了地图的滚动）
+ball.py -- 就是右下角仍的那个球
+bobo.py -- 那只别扭的鸟
+pika.py --  违和的金皮卡
+bullet.py -- 子弹
+pip.py  -- 管道
+qiqiu.py -- 气球
+scoreboard.py -- 记录分数
+button.py  -- 制作按键（就是那个简陋的“开始”键）
+game_function -- 游戏功能实现（虽然有好多被我移到main里去了）
+剩下的基本就是图片了。。。
+
+
 
 # Header 1
 ## Header 2
