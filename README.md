@@ -29,20 +29,15 @@ game_function -- 游戏功能实现（虽然有好多被我移到main里去了�
 剩下的基本就是图片了。。。
 
 
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
+
+```markdown
+
+
+
+```
 ### Jekyll Themes
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/crwen/flappy-bird/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
