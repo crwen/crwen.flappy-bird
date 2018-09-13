@@ -32,10 +32,38 @@ game_function -- 游戏功能实现（虽然有好多被我移到main里去了�
 ```
 
 
-
+ball.py
+#其实这些障碍物的写法都差不多，我就只贴那个球的代码了
 ```markdown
 
+import pygame
+from pygame.sprite import Sprite
 
+class Ball(Sprite):
+    def __init__(self, screen, bo):
+        super(Ball, self).__init__()
+        self.screen = screen
+        self.x = bo.centerx
+        self.y = bo.centery
+        self.ball = pygame.image.load("ball.png")   #加载图片
+        self.mask = pygame.mask.from_surface(self.ball)  #mask属性可以罩住图片的透明部分
+
+        self.rect = self.ball.get_rect()
+        
+        self.rect.centerx = 750
+        self.rect.centery = 350
+
+       
+        self.speed = [2, 3]       #设置球的x，y方向的速度
+        self.speed[1] = self.y/self.x * self.speed[0]
+
+    def update(self):
+        #if self.rect.x >= 0 or self.rect.y >= 0:
+        self.rect.centerx -= 5
+        self.rect.centery -= 2
+
+    def draw_ball(self):
+        self.screen.blit(self.ball, self.rect)  #将球在屏幕上画出来
 
 ```
 ### Jekyll Themes
