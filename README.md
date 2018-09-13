@@ -66,10 +66,70 @@ class Ball(Sprite):
         self.screen.blit(self.ball, self.rect)  #将球在屏幕上画出来
 
 ```
-### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/crwen/flappy-bird/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+接下来是game_function.py
+```markdown
+#名字都和前面介绍的一样，这里我就不解释了
+import sys
+import pygame
+from pip import pip_g
 
-### Support or Contact
+from random import *
+#from button import Button
+from bullet import Bullet
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+def fire_bullet(screen, pika, bullets):
+    #开火！！！
+    new_bullet = Bullet(screen, pika)
+    bullets.add(new_bullet)
+
+def update_bullets(screen, pika, bullets):
+    #更新子弹
+    bullets.update()
+
+    #删除已消失的子弹
+    for bullet in bullets.copy():
+        if bullet.rect.left >= 800:
+            bullets.remove(bullet)
+
+def check_keydown_event(event, bo, pika, bullets, screen):
+    """响应按下"""
+    if event.key == pygame.K_LEFT:
+        bo.moving_left = True
+    elif event.key == pygame.K_RIGHT:
+        bo.moving_right = True
+    elif event.key == pygame.K_UP:
+        bo.moving_up = True
+    elif event.key == pygame.K_SPACE:
+        fire_bullet(screen, pika, bullets)
+    if event.key == pygame.K_w:
+        pika.moving_up = True
+    elif event.key == pygame.K_s:
+        pika.moving_down = True
+
+def check_keyup_event(event, bo, pika):
+    """响应松开"""
+    if event.key == pygame.K_RIGHT:
+        bo.moving_right = False
+    elif event.key == pygame.K_LEFT:
+        bo.moving_left = False
+    elif event.key == pygame.K_UP:
+        bo.moving_up = False
+    if event.key == pygame.K_w:
+        pika.moving_up = False
+    elif event.key == pygame.K_s:
+        pika.moving_down = False
+
+def check_event(bo, screen, pika, bullets):
+    """响应按键事件"""
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+        elif event.type == pygame.KEYUP:
+            check_keyup_event(event, bo, pika)
+        elif event.type == pygame.KEYDOWN:
+            check_keydown_event(event, bo, pika, bullets, screen)
+
+```
+
