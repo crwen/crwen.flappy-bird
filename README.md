@@ -130,7 +130,10 @@ def check_event(bo, screen, pika, bullets):
             check_keyup_event(event, bo, pika)
         elif event.type == pygame.KEYDOWN:
             check_keydown_event(event, bo, pika, bullets, screen)
-
+           
 ```
+能力有限，剩下代码我就不解释了。  
+学习pygame推荐目光博客，讲解很清楚:http://eyehere.net/category/python/
+
 
 pygaem新手，有许多错误或者不合适的地方还请见谅
