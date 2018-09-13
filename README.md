@@ -12,7 +12,7 @@
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
-Syntax highlighted code block
+
 
 因为文件很乱，在这里我解释一下我的文件吧
 main.py -- 主程序（我好像放了好多乱七八糟的东西）
@@ -29,10 +29,6 @@ game_function -- 游戏功能实现（虽然有好多被我移到main里去了�
 剩下的基本就是图片了。。。
 
 
-
-# Header 1
-## Header 2
-### Header 3
 
 - Bulleted
 - List
