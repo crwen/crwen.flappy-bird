@@ -9,7 +9,7 @@
   地图的移动（好像也不是特点），其实也就是将两张一样的图片一起移动，你也可以贴几朵云，只是我懒得加。。。
   碰撞检测：制作过程中做了许多碰撞检测（鸟，皮卡与管道，气球，地面以及球的碰撞的碰撞，子弹与气球的碰撞），完成后的我一度不想再做碰撞检测了。
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
 
 ```markdown
 
